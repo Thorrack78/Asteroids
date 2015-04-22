@@ -215,7 +215,7 @@ function intersects(x1, y1, w1, h1, x2, y2, w2, h2)
 
 function run()
 {
-	context.fillStyle = "#ccc";
+	context.fillStyle = "#7587D0";
 	context.fillRect(0, 0, canvas.width, canvas.height);
 	
 	var deltaTime = getDeltaTime();
@@ -243,9 +243,10 @@ function runSplash(deltaTime)
 		return;
 	}
 	
-	context.fillStyle = "#000";
-	context.font="24px Arial";
-	context.fillText("SPLASH SCREEN", 200, 240);
+	context.fillStyle = "#660066";
+	context.font="40px Impact";
+	context.fillText("AIE ASTEROIDS", 200, 240);
+	context.fillText("by G.Hillier", 200, 300);
 }
 
 function runGame(deltaTime)
@@ -358,9 +359,14 @@ function runGame(deltaTime)
 	}
 }
 
-function runGameOver(deltaTime)
+function runGameOver (deltaTime)
 {
-	
+	{
+		context.fillStyle = "#FF0000";
+		context.font = "40px Impact";
+		context.fillText("GAME OVER!", 200, 240);
+		context.fillText("Press F5 to Restart", 200, 300)
+	}
 }
 
 //60FPS framework
